@@ -18,10 +18,18 @@ function mostrarHead(){
 function mostrarNav(){
     echo "<nav>
             <ul>
-                <li><a href='#'>materias</a></li>
-                <li><a href='#'>tabla con filtros</a></li>
+                <li><a href='http://localhost/db_universidad/router.php?action=materias'>todas las materias</a></li>
+                <li><a href='http://localhost/db_universidad/router.php?action=materias-carreras'>materias + carreras</a></li>
+                
                 
             </ul>
+            <ol>
+                        <li>filtrar por</li>
+                        <li><a href='http://localhost/db_universidad/router.php?action=materias'>prof matematicas</a></li>
+                        <li><a href='http://localhost/db_universidad/router.php?action=materias'>TUDAI</a></li>
+                        <li><a href='http://localhost/db_universidad/router.php?action=materias'>prof biologia</a></li>
+                        <li><a href='http://localhost/db_universidad/router.php?action=materias'>lic canto</a></li>
+                    </ol>
         </nav>";
 } 
 function mostrarHeader(){

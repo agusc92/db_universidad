@@ -3,15 +3,25 @@
     require_once 'templates/estructura.php';
     require_once 'templates/tabla.php';
     require_once 'db_coneccion/peticiones.php';
-    $action='';
+    $action=[];
     if(!empty($_GET['action'])){
         $action = explode('/',$_GET['action']);
     }else{
-        $action = 'tabla';
+        array_push($action,'materias');
     }
 
     mostrarHead();
     mostrarHeader();
-
-    mostrarTabla(selecAll());
+    
+    switch($action[0]){
+        case 'materias':
+            mostrarTabla(selecAll());
+            break;
+        case 'materias-carreras':
+            mostrarTabla(selecJoin());
+            break;
+        
+            
+    }
+    
     mostrarFooter();

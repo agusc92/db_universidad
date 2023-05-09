@@ -33,6 +33,7 @@ header{
     display: flex;
     flex-direction: column;
     align-content: center;
+    
 }
 ul{
     display: flex;
@@ -44,9 +45,21 @@ li{
     margin: 0 10px 0 10px;
     background-color: bisque;
     padding: 3px;
+    height: fit-content;
+    
 }
 li:hover{
     cursor: pointer;
+}
+ol li{
+    margin-top: 3px;
+}
+ol{
+    margin: 0;
+}
+nav{
+    display: flex;
+    width: 800px;
 }
 a{
     color: black;
