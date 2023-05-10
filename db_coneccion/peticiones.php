@@ -16,3 +16,12 @@ function selecJoin(){
     $result = $peticion -> fetchAll(PDO::FETCH_ASSOC);
     return $result;
 }
+
+function selecFiltro($params){
+    $coneccion = conectar();
+    $peticion = $coneccion -> prepare("SELECT nombre AS 'materias de $params[1]',profesor FROM materias WHERE materias.carrera_id = ?");
+    $peticion ->execute([intval($params[2])]);
+    $result = $peticion ->fetchAll(PDO::FETCH_ASSOC);
+    return $result;
+
+}

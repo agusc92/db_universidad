@@ -20,7 +20,8 @@
         case 'materias-carreras':
             mostrarTabla(selecJoin());
             break;
-        
+            default:
+            mostrarTabla(selecFiltro($action));
             
     }
     
